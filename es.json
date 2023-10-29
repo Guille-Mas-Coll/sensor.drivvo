@@ -1,0 +1,131 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Ingrese la información de su cuenta:",
+        "data": {
+          "email": "E-mail",
+          "password": "Contraseña"
+        }
+      },
+      "vehicle": {
+        "description": "Selecciona los vehículos que deseas agregar a la integración:",
+        "data": {
+          "vehicles": "Vehiculos"
+        }
+      },
+      "reauth_confirm": {
+        "data": {
+          "email": "E-mail",
+          "password": "Contraseña"
+        }
+      }
+    },
+    "error": {
+      "auth_error": "Autenticación no válida"
+    },
+    "abort": {
+      "already_configured": "Esta cuenta ya está configurada.",
+      "reauth_successful": "Reautenticación exitosa."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "refuellings": {
+        "name": "Repostajes",
+        "state_attributes": {
+          "veiculo": {
+            "name": "Vehiculo"
+          },
+          "odometro":  {
+            "name": "último cuentakilómetros"
+          },
+          "data_odometro":  {
+            "name": "Fecha del último cuentakilómetros"
+          },
+          "ultima_media":  {
+            "name": "Último promedio de combustible"
+          },
+          "media_geral":  {
+            "name": "Promedio general de combustible"
+          },
+          "posto":  {
+            "name": "Gasolinera"
+          },
+          "tipo_de_combustivel":  {
+            "name": "tipo de combustible"
+          },
+          "motivo_do_abastecimento":  {
+            "name": "Motivo del repostaje"
+          },
+          "data_do_abastecimento":  {
+            "name": "Fecha del repostaje"
+          },
+          "valor_total_pago":  {
+            "name": "Valor reabastecimiento de combustible"
+          },
+          "preco_do_combustivel":  {
+            "name": "Precio del combustible"
+          },
+          "soma_total_de_abastecimentos":  {
+            "name": "Repostajes totales"
+          },
+          "soma_total_de_valores_pagos_em_todos_os_abastecimentos":  {
+            "name": "Valor total repostajes"
+          },
+          "encheu_o_tanque":  {
+            "name": "Deposito lleno",
+            "state": {
+              "false": "No",
+              "true": "Si"
+            }
+          },
+          "km_percorridos_desde_o_ultimo_abastecimento":  {
+            "name": "Distancia recorrida desde el último repostaje"
+          },
+          "gasolina_mais_barata_ate_entao":  {
+            "name": "Combustible más barato"
+          },
+          "refuelling_volume":  {
+            "name": "Último volumen de reabastecimiento de combustible"
+          },
+          "refuelling_volume_total":  {
+            "name": "Volumen total de reabastecimientos"
+          }
+        }
+      }
+    }
+  },
+  "issues": {
+    "yaml_deprecated": {
+      "title": "La configuración de Drivvo en YAML está obsoleta",
+      "description": "La configuración de Drivvo en YAML está obsoleta.\n\nSu configuración se ha importado a la interfaz de usuario y se puede eliminar del archivo `configuration.yaml` y reiniciar Home Assistant.."
+    },
+    "import_already_configured": {
+      "title": "La cuenta {email} ya existe",
+      "description": "La cuenta {email} ya existe y por lo tanto no se importó.\n\nPuede eliminar la configuración de su archivo `configuration.yaml`."
+    },
+    "vehicle_non_existent": {
+      "title": "El ID del vehículo {vehicle} no existe en la aplicación Drivvo",
+      "description": "El ID del vehículo {vehicle} no existe, Puede haber sido borrado.\n\nVaya a las opciones de configuración de integración y retire el vehículo."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "email": "E-mail",
+          "password": "Contraseña",
+          "vehicles": "Vehiculos",
+          "no_vehicles": "No hay vehículos activos en esta cuenta."
+        }
+      }
+    },
+    "abort":{
+      "changes_successful": "Los cambios se guardaron correctamente."
+    },
+    "error": {
+      "auth_error": "Autenticación no válida"
+    }
+  }
+}
